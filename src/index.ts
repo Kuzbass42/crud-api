@@ -12,7 +12,7 @@ const port = process.env.PORT || 4000;
 const userService = new UserService();
 const userController = new UserController(userService);
 
-const server = createServer(function (request: IncomingMessage, response: ServerResponse) {
+export const server = createServer(function (request: IncomingMessage, response: ServerResponse) {
   try {
     response.setHeader('Content-Type', 'application/json');
 
